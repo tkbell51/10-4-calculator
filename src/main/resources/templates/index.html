@@ -8,9 +8,9 @@
 <body class="container">
 <h1>Javaculator 1.0</h1>
 <small>Dracula made a calculator. blah, bla, blah</small>
-<form action="/">
-    <input type="text" name="firstNum" th:value="${resultsData}"/>
-    <select name="operator" id="">
+<form class="form-inline" action="/">
+    <input class="form-control input-lg" type="text" name="firstNum" th:value="${resultsData}" placeholder="number"/>
+    <select class="form-control input-lg" name="operator" id="">
         <option value="">Choose Operation</option>
         <option value="+">Addition +</option>
         <option value="-">Subtraction -</option>
@@ -18,9 +18,12 @@
         <option value="/">Division /</option>
         <option value="%">Remainder %</option>
         <option value="^">Exponent ^</option>
+        <option value="left">Bitwise Shift Left </option>
+        <option value="right">Bitwise Shift Right </option>
+        <option value="XOR">XOR</option>
     </select>
-    <input type="text" name="secNum"/>
-    <input type="submit" value="send"/>
+    <input class="form-control input-lg" type="text" name="secNum" placeholder="number"/>
+    <input class="btn btn-primary btn-lg" type="submit" value="send"/>
 </form>
 <h3 th:text="${pageData}"></h3>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
